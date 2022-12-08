@@ -16,6 +16,8 @@ const diameter = document.querySelector('.diameter');
 const lengthLabel = document.querySelector('.length-label');
 const lengthUp = document.querySelector('.length-up');
 
+// Подсказка при наведении на label с вводом диаметра
+
 diameterLabel.addEventListener('mouseover', () => {
     diameter.style = 'display: block'
 });
@@ -23,6 +25,8 @@ diameterLabel.addEventListener('mouseover', () => {
 diameterLabel.addEventListener('mouseout', () => {
     diameter.style = 'display: none'
 });
+
+// Подсказка при наведении на label с вводом длины
 
 lengthLabel.addEventListener('mouseover', () => {
     lengthUp.style = 'display: block'
@@ -32,13 +36,18 @@ lengthLabel.addEventListener('mouseout', () => {
     lengthUp.style = 'display: none'
 });
 
+// Поменять тему
+
 btnDark.addEventListener('click', () => {
     body.classList.toggle('dark')
     form.classList.toggle('dark')
 });
 
+// Вычисление по нажатию на кнопку
+
 button.addEventListener('click', (event) => {
     event.preventDefault();
+
     const inputDiameter = Number(document.getElementById('diameter').value);
     const inputLength = Number(document.getElementById('length').value);
     const result = document.querySelector('.result');
@@ -75,14 +84,14 @@ button.addEventListener('click', (event) => {
     };
 
     getValue(inputDiameter);
-    
+
     if (!value) {
         result.textContent = 'Введите верный диаметр!';
     } else {
         if (!inputLength) {
             result.textContent = 'Введите длину трубопровода!'
         } else {
-            result.textContent = Math.round((((value * inputLength) * 2) * 3), 4) + ' Куба';
+            result.textContent = Math.round(((value * (inputLength * 2)) * 3), 4) + ' Куба';
         }
     }
 });
