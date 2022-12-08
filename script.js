@@ -44,58 +44,38 @@ button.addEventListener('click', (event) => {
     const result = document.querySelector('.result');
     let value;
 
-    switch (inputDiameter) {
-        case 700:
-            value = 0.390; break;
-        case 600:
-            value = 0.300; break;
-        case 500:
-            value = 0.210; break;
-        case 450:
-            value = 0.135; break;
-        case 400:
-            value = 0.135; break;
-        case 350:
-            value = 0.101; break;
-        case 300:
-            value = 0.075; break;
-        case 219:
-            value = 0.034; break;
-        case 200:
-            value = 0.034; break;
-        case 250:
-            value = 0.053; break;
-        case 273:
-            value = 0.053; break;
-        case 150:
-            value = 0.018; break;
-        case 159:
-            value = 0.018; break;
-        case 125:
-            value = 0.012; break;
-        case 133:
-            value = 0.012; break;
-        case 100:
-            value = 0.008; break;
-        case 108:
-            value = 0.008; break;
-        case 80:
-            value = 0.0053; break;
-        case 89:
-            value = 0.0053; break;
-        case 70:
-            value = 0.0039; break;
-        case 76:
-            value = 0.0039; break;
-        case 50:
-            value = 0.0014; break;
-        case 57:
-            value = 0.0014; break;
-        default:
-            value = 0;
-            break;
-    }
+    function getValue(inputDiameter) {
+        const diameterDate = {
+            '700': '0.390',
+            '600': '0.300',
+            '500': '0.210',
+            '450': '0.135',
+            '400': '0.135',
+            '350': '0.101',
+            '300': '0.075',
+            '273': '0.053',
+            '250': '0.053',
+            '219': '0.034',
+            '200': '0.034',
+            '159': '0.018',
+            '150': '0.018',
+            '133': '0.012',
+            '125': '0.012',
+            '108': '0.008',
+            '100': '0.008',
+            '89': '0.0053',
+            '80': '0.0053',
+            '76': '0.0039',
+            '70': '0.0039',
+            '57': '0.0014',
+            '50': '0.0014',
+            '0': '0'
+        };
+        return value = +diameterDate[inputDiameter];
+    };
 
+    getValue(inputDiameter);
+    
     if (!value) {
         result.textContent = 'Введите верный диаметр!';
     } else {
