@@ -16,6 +16,15 @@ const diameter = document.querySelector('.diameter');
 const lengthLabel = document.querySelector('.length-label');
 const lengthUp = document.querySelector('.length-up');
 
+// Для сохранения темы в LocalStorage
+
+let theme;
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark');
+    form.classList.add('dark');
+}
+
 // Подсказка при наведении на label с вводом диаметра
 
 diameterLabel.addEventListener('mouseover', () => {
@@ -36,11 +45,16 @@ lengthLabel.addEventListener('mouseout', () => {
     lengthUp.style = 'display: none'
 });
 
-// Поменять тему
+// Поменять тему и сохранить в localStorage
 
 btnDark.addEventListener('click', () => {
-    body.classList.toggle('dark')
-    form.classList.toggle('dark')
+    body.classList.toggle('dark');
+    form.classList.toggle('dark');
+    theme = 'light';
+    if (body.classList.contains('dark')) {
+        theme = 'dark';
+    }
+    localStorage.setItem('theme', theme);
 });
 
 // Вычисление по нажатию на кнопку
