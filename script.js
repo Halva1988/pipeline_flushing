@@ -8,7 +8,7 @@
 `
 
 const button = document.querySelector('.btn');
-const btnDark = document.querySelector('.change');
+const btnTheme = document.querySelector('.change');
 const body = document.querySelector('.body');
 const form = document.querySelector('.form-wrapper');
 const diameterLabel = document.querySelector('.diameter-label');
@@ -18,7 +18,6 @@ const lengthUp = document.querySelector('.length-up');
 
 // Для сохранения темы в LocalStorage
 
-let theme;
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
     body.classList.add('dark');
@@ -47,10 +46,10 @@ lengthLabel.addEventListener('mouseout', () => {
 
 // Поменять тему и сохранить в localStorage
 
-btnDark.addEventListener('click', () => {
+btnTheme.addEventListener('click', () => {
     body.classList.toggle('dark');
     form.classList.toggle('dark');
-    theme = 'light';
+    let theme = 'light';
     if (body.classList.contains('dark')) {
         theme = 'dark';
     }
