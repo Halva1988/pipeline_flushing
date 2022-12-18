@@ -13,14 +13,12 @@ h1 {
     font-size: calc(32 / 1440 * 100vw);
     text-shadow: 2px 2px 4px black;
     font-family: 'Acme', sans-serif;
-    margin-bottom: 50px;
     text-align: center;
     margin: 5% auto;
 }
 
 .form-wrapper {
     box-shadow: 5px 5px 20px #401d38;
-    background-color: #efe4ed;
     background: #eae4e54a;
     flex-direction: column;
     border-radius: 22px;
@@ -65,6 +63,7 @@ label {
 }
 
 input {
+    border: none;
     border-bottom: 2px solid rgb(195, 116, 116);
     font-size: calc(28 / 1440 * 100vw);
     text-shadow: 2px 2px 4px black;
@@ -74,13 +73,12 @@ input {
     background: space;
     font-weight: bold;
     outline: none;
-    border: none;
     width: 100%;
 }
 
 button {
     font-size: calc(24 / 1440 * 100vw);
-    box-shadow: 0px 2px 8px #a80d86;
+    box-shadow: 0 2px 8px #a80d86;
     text-shadow: 2px 2px 4px black;
     height: calc(60 / 1440 * 100vw);
     transition: all .4s ease;

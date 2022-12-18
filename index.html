@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Промывка</title>
 </head>
 
 <body class="body">
     <h1>Программа расчёта объёма воды, при 3х кратной промывки</h1>
     <form action="/" class="form-wrapper">
-        <div class="diameter wrapper">
+        <div class="diametr wrapper">
             <div class="pop-up diameter">Сюда нужно ввести диаметр трубы: от 50 до 700</div>
             <label class="diameter-label" for="diameter">Введите условный диаметр:</label>
-            <input id="diameter" type="number">
+            <input type="number" id="diameter">
         </div>
         <div class="length wrapper">
             <div class="pop-up length-up">Сюда нужно ввести длину одной трубы</div>
             <label class="length-label" for="length">Введите длину участка:</label>
-            <input id="length" type="number">
+            <input type="number" id="length">
         </div>
         <button class="btn">Результат</button>
         <h2 class="result"></h2>
