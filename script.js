@@ -64,7 +64,6 @@ button.addEventListener('click', (event) => {
     const inputDiameter = Number(document.getElementById('diameter').value);
     const inputLength = Number(document.getElementById('length').value);
     const result = document.querySelector('.result');
-    let value;
 
     function getValue(inputDiameter) {
         const diameterDate = {
@@ -96,7 +95,7 @@ button.addEventListener('click', (event) => {
         return value = +diameterDate[inputDiameter];
     };
 
-    getValue(inputDiameter);
+    const value = getValue(inputDiameter);
 
     if (!value) {
         result.textContent = 'Введите верный диаметр!';
