@@ -92,7 +92,7 @@ button.addEventListener('click', (event) => {
             '50': '0.0014',
             '0': '0'
         };
-        return value = +diameterDate[inputDiameter];
+        return +diameterDate[inputDiameter];
     };
 
     const value = getValue(inputDiameter);
